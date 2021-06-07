@@ -7,7 +7,7 @@ import { useUser } from "../../context/userContext/userContext"
 
 export function QuizResult () {
   const { quizState, quizDispatch } = useQuiz()
-  const { userState, userDispatch } = useUser()
+  const { userDispatch } = useUser()
 
   useEffect(() => {
     quizDispatch({type: "RIGHT-WRONG"})
