@@ -1,0 +1,25 @@
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-weight: 600;
+  margin: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.header-details {
+  margin: 0.5rem 2.5rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.header-details > h3 {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.header-details > h4 {
+  margin: 0.5rem 0;
+}
