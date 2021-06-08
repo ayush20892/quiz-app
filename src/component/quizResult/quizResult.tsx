@@ -17,13 +17,15 @@ export function QuizResult () {
   return(
     <div className="quizResult">
       <div className="score">
-        Score: {quizState.currentQuizScore}
+        Quiz Score: <span>{quizState.currentQuizScore}</span>
       </div>
       <div className="correctly-answered">
-        <AiOutlineCheck /> {quizState.userAnswer.right}
+        <AiOutlineCheck style={{fill: "green"}}/> <span>{quizState.userAnswer.right}</span>
+        Correct
       </div>
       <div className="wrongly-answered">
-        <AiOutlineClose /> {quizState.userAnswer.wrong}
+        <AiOutlineClose style={{fill: "red"}}/> 
+        <span>{quizState.userAnswer.wrong}</span> Wrong
       </div>
       <Link to="/">Home</Link>
     </div>

@@ -1,0 +1,51 @@
+.quizResult {
+  margin: 5rem 1rem;
+}
+
+.quizResult > .score {
+  margin: 2rem 0;
+  font-size: 1.8rem;
+}
+
+.quizResult > .score > span {
+  font-weight: bold;
+}
+
+.quizResult > .correctly-answered {
+  border: 1px solid green;
+  margin: 3rem 2rem;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+}
+
+.quizResult > .correctly-answered > span {
+  margin: 0 1rem;
+  position: relative;
+  bottom: 0.1rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.quizResult > .wrongly-answered {
+  border: 1px solid red;
+  margin: 3rem 2rem;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+}
+
+.quizResult > .wrongly-answered > span {
+  margin: 0 1rem;
+  position: relative;
+  bottom: 0.05rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.quizResult > a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+}
