@@ -9,7 +9,6 @@ type headerProps = {
 
 export function Header({ heading, greeting, username } : headerProps ) {
   const { userState } = useUser()
-  console.log(userState)
   return(
     <header>
       <h1>{heading}</h1>
