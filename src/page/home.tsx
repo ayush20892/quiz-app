@@ -11,7 +11,7 @@ export function Home() {
   const { userDispatch } = useUser()
   useEffect(() => {
     quizDispatch({type: "RESET"})
-  })
+  },[])
   return (
     <div className="App">
       <Header heading={"General Fun Game"} greeting={"Welcome,"} username={"Ayush"}/>
