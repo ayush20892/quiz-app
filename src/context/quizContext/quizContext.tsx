@@ -10,7 +10,7 @@ export function QuizProvider({children}: any) {
 
   useEffect(() => {
     localStorage.setItem("optionSelected", JSON.stringify(quizState.optionSelected)) 
-  },[quizState])
+  },[quizState.optionSelected])
 
   return(
     <QuizContext.Provider value={{quizState, quizDispatch}}>
