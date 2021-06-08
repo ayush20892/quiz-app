@@ -10,7 +10,7 @@ export const initialState: Initialstate = {
     wrong: 0
   },
   showAnswer: false,
-  timer: 0
+  timer: 10
 }
 
 export function quizReducer (state: Initialstate, action: Action) {
