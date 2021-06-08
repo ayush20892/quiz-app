@@ -235,7 +235,7 @@ export const quiz: Quiz[] = [
         options: [
           {
             value: "A - Saina Nehwal",
-            isRight: true
+            isRight: false
           },
           {
             value: "B - Jwala Gutta",
@@ -243,7 +243,7 @@ export const quiz: Quiz[] = [
           },
           {
             value: "C - Prakash Padukone",
-            isRight: false
+            isRight: true
           },
           {
             value: "D - Pullela Gopichand",
