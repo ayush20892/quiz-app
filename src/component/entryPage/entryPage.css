@@ -1,0 +1,17 @@
+.entry-box > input {
+  margin-top: 10rem;
+  border: none;
+  border-bottom: 1px solid black;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.entry-box > .username-submit > button {
+  margin: 3rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  background-color: white;
+}
