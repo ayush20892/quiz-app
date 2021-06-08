@@ -14,7 +14,6 @@ type quizCardProp = {
 export function QuizCard({ quizName, questionNumber }: quizCardProp) {
   const quizData = quiz.find(singleQuiz => singleQuiz.quizName === quizName)?.questions! 
   const currentquestion = quizData[questionNumber]
-  
   const {quizState, quizDispatch} = useQuiz()
   const navigate = useNavigate()
 

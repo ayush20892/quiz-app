@@ -5,22 +5,22 @@ main {
 .quiz-timer {
   margin: auto;
   border: 1px solid black;
-  border-radius: 50%;
-  width: 12%;
+  border-radius: 45%;
+  width: 11%;
   font-size: 1.9rem;
 }
 
 .quiz-question-card > .question {
-  width: 80%;
-  margin: 2rem 1.5rem;
-  font-size: 2rem;
+  width: 92%;
+  margin: 1.5rem 4%;
+  font-size: 1.5rem;
 }
 
 .quiz-question-card > .options > button {
   width: 80%;
-  padding: 1rem 0rem;
-  margin: 0.5rem 0;
-  font-size: 1rem;
+  padding: 0.8rem 0rem;
+  margin: 0.3rem 0;
+  font-size: 1.2rem;
   cursor: pointer;
   background-color: white;
   border: 2px solid black;
@@ -29,13 +29,14 @@ main {
 
 .quiz-question-card > button {
   margin: 2.5rem 0;
-  width: 20%;
-  padding: 0.5rem 0;
+  width: 35%;
+  padding: 0.3rem 0;
   font-size: 1.2rem;
 }
 
 .quiz-question-card > .restart {
   display: flex;
   justify-content: flex-start;
-  margin: 1rem;
+  margin: 0.5rem 1rem;
 }
+
