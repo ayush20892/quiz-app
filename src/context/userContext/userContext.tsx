@@ -10,7 +10,7 @@ export const UserProvider = ({children}: any)  => {
 
   useEffect(() => {
     localStorage.setItem("userScore", JSON.stringify(userState.score))
-  })
+  },[userState.score])
 
   return(
     <UserContext.Provider value={{userState, userDispatch}}>
