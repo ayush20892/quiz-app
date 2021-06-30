@@ -25,3 +25,56 @@
   font-size: 1.2rem;
   font-weight: bold;
 }
+
+.home-btns {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.user-btn {
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 500px) {
+  .quiz-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .quiz-card > img {
+    width: 96%;
+  }
+
+  .quiz-card {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .quiz-card > button {
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    width: 45%;
+    cursor: pointer;
+  }
+
+  .home-btns {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 5rem;
+  }
+
+  .user-btn {
+    width: 15%;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+  }
+}
