@@ -6,7 +6,7 @@ export function QuizPage() {
   const { quizName, questionNumber } = useParams()
   return(
     <div>
-      <Header heading={quizName} greeting={"Player : "} username={"Ayush"} />
+      <Header heading={quizName} greeting={"Player : "} />
       <QuizCard quizName={quizName} questionNumber={+questionNumber}/>
     </div>
   );
