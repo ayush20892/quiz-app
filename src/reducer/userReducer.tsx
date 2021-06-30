@@ -9,9 +9,11 @@ export function userReducer (state: InitialStateUser, action: ActionUser) {
   switch(action.type) {
     case "ADD-USER":
       localStorage.setItem("userName", JSON.stringify(action.payload))
+      localStorage.setItem("userScore", JSON.stringify(state.score))
       return {...state, userName: action.payload}
     case "DELETE-USER":
       localStorage.removeItem("userName")
+      localStorage.removeItem("userScore")
       return {...state, userName: "", score: 0}
     case "UPDATE-SCORE":
       return {...state, score: state.score + action.payload }
