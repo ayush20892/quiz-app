@@ -8,10 +8,6 @@ const UserContext = createContext({} as userProviderType)
 export const UserProvider = ({children}: any)  => {
   const [userState, userDispatch] = useReducer(userReducer, initialStateUser)
 
-  useEffect(() => {
-    localStorage.setItem("userScore", JSON.stringify(userState.score))
-  },[userState.score])
-
   return(
     <UserContext.Provider value={{userState, userDispatch}}>
       {children}
