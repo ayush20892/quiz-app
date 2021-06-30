@@ -37,6 +37,30 @@ main {
 .quiz-question-card > .restart {
   display: flex;
   justify-content: flex-start;
+  gap: 1rem;
   margin: 0.5rem 1rem;
+  position: absolute;
+  bottom: 1rem;
 }
 
+
+
+@media screen and (min-width: 500px) {
+
+  .quiz-timer {
+    width: 3%;
+  }
+  
+  .quiz-question-card > .options > button {
+    width: 30%;
+  }
+
+  .quiz-question-card > button {
+    width: 10%;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+}

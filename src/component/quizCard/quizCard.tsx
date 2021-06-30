@@ -65,6 +65,11 @@ export function QuizCard({ quizName, questionNumber }: quizCardProp) {
           quizDispatch({type: "RESET"});
           navigate(`/quiz/${quizName}/${0}`)
         }}>Resatart Quiz</button>
+
+        <button onClick={() => {
+          quizDispatch({type: "RESET"});
+          navigate(`/`)
+        }}>Home</button>
       </div>
     </main>
   );
