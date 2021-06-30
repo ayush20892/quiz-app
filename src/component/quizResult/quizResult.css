@@ -11,14 +11,24 @@
   font-weight: bold;
 }
 
-.quizResult > .correctly-answered {
-  border: 1px solid green;
-  margin: 3rem 2rem;
+.quizResult > .right-wrong {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quizResult > .right-wrong > .answered-box {
+  width: 80%;
+  margin: 1rem 2rem;
   padding: 1rem 1rem;
   font-size: 1.5rem;
 }
 
-.quizResult > .correctly-answered > span {
+.quizResult > .right-wrong > .correctly-answered {
+  border: 1px solid green;
+}
+
+.right-wrong > .correctly-answered > span {
   margin: 0 1rem;
   position: relative;
   bottom: 0.1rem;
@@ -26,14 +36,12 @@
   font-weight: 800;
 }
 
-.quizResult > .wrongly-answered {
+.quizResult > .right-wrong > .wrongly-answered {
   border: 1px solid red;
-  margin: 3rem 2rem;
-  padding: 1rem 1rem;
-  font-size: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-.quizResult > .wrongly-answered > span {
+.right-wrong > .wrongly-answered > span {
   margin: 0 1rem;
   position: relative;
   bottom: 0.05rem;
@@ -48,4 +56,14 @@
   border: 1px solid black;
   border-radius: 0.5rem;
   padding: 0.5rem 2rem;
+}
+
+
+
+@media screen and (min-width: 500px) {
+
+  .quizResult > .right-wrong > .answered-box {
+    width: 30%;
+  }
+
 }
