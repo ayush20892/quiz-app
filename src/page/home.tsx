@@ -5,28 +5,40 @@ import { useEffect } from "react";
 import { useQuiz } from "../context/quizContext/quizContext";
 import { useUser } from "../context/userContext/userContext";
 import { refreshPage } from "../util";
+import { deleteUser, resetUserScore } from "../networkCalls";
 
 export function Home() {
   const { quizDispatch } = useQuiz()
-  const { userDispatch } = useUser()
+  const { userState, userDispatch } = useUser()
   useEffect(() => {
     quizDispatch({type: "RESET"})
   },[])
+
+  async function deleteUserHandler () {
+    await deleteUser(userState.userName, userDispatch)
+    refreshPage()
+  }
+
+  async function resetUserHandler () {
+    await resetUserScore(userState, userDispatch)
+  }
+
   return (
     <div className="App">
-      <Header heading={"General Fun Game"} greeting={"Welcome,"} username={"Ayush"}/>
+      <Header heading={"General Fun Game"} greeting={"Welcome,"}/>
+      <div className="quiz-list">
       {quiz.map(({quizName, quizImage}) => {
           return(
             <QuizList quizName={quizName} quizImage={quizImage!} key={quizName} />
           );
       })}
-      <button onClick={() => userDispatch({type: "RESET-USER"})}>Reset User Score</button>
-      <button onClick={() => {
-        userDispatch({type: "DELETE-USER"})
-        refreshPage()
-      }}>
-        Delete User
-      </button>
+      </div>
+      <div className="home-btns">
+        <button className="reset-user user-btn" onClick={resetUserHandler}>Reset User Score</button>
+        <button className="delete-user user-btn" onClick={deleteUserHandler}>
+          Delete User
+        </button>
+      </div>
     </div>
   );
 }
