@@ -1,4 +1,4 @@
-# New Beginnings For Roc*, 17th OCT 2021
+# New Beginnings For Roc8, 17th OCT 2021
 
 # Getting Started with Create React App
 
