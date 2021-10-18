@@ -13,7 +13,6 @@ export function EntryPage() {
     const res = await postNewUser(inputValue, userDispatch)
     if(res === 1)
       refreshPage()
-    console.log(res)
   }
 
   return(
