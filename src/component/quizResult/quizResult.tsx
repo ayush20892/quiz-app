@@ -9,9 +9,11 @@ import { updateUserScore } from "../../networkCalls"
 export function QuizResult () {
   const { quizState, quizDispatch } = useQuiz()
   const { userState, userDispatch } = useUser()
+  console.log(quizState.currentQuizScore)
 
   useEffect(() => {
     quizDispatch({type: "RIGHT-WRONG"})
+    userDispatch({type: "UPDATE-SCORE", payload: quizState.currentQuizScore});
     quizDispatch({type: "CLEAR-OPTIONS"})
   },[quizDispatch])
 
@@ -20,7 +22,7 @@ export function QuizResult () {
       await updateUserScore(userState, quizState.currentQuizScore, userDispatch)
     })()
   },[quizDispatch])
-
+  console.log("User local", userState.score)
   return(
     <div className="quizResult">
       <div className="score">

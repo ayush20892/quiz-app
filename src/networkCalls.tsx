@@ -33,7 +33,7 @@ export const updateUserScore = async (user: InitialStateUser, score: number, use
     const res = await axios.post(`https://api-quiz-unusual.herokuapp.com/user/${user.userName}`, {
       score: user.score + score
     })
-    userDispatch({type: "UPDATE-SCORE", payload: score});
+    
   } catch(err) {
     console.log(err)
   }
@@ -46,6 +46,15 @@ export const resetUserScore = async (user: InitialStateUser, userDispatch: (acti
     })
     userDispatch({type: "RESET-USER"});
   } catch(err) {
+    console.log(err)
+  }
+}
+
+
+export const getQuiz = async () => {
+  try {
+    const res = await axios.get("https://api-quiz-unusual.herokuapp.com/quiz")
+  }  catch(err) {
     console.log(err)
   }
 }
